@@ -15,7 +15,7 @@ on:
 jobs:
 
   build:
-    runs-on: ubuntu-latest
+    runs-on:self-hosted
 
     steps:
     - name: Checkout repository
@@ -45,7 +45,7 @@ jobs:
         version: v1.56.2
   
   push:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     needs: build
 
