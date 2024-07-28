@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, runner1]
+    runs-on: self-hosted
 
     steps:
       - name: Checkout repository
@@ -29,7 +29,7 @@ jobs:
         run: go test ./...
 
   code-quality:
-    runs-on: [self-hosted, runner1]
+    runs-on: self-hosted
 
     steps:
       - name: Checkout repository
@@ -41,7 +41,7 @@ jobs:
           version: v1.56.2
 
   push:
-    runs-on: [self-hosted, runner1]
+    runs-on: self-hosted
     needs: build
 
     steps:
